@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="LithoGratos.Window1" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="LithoGratos"
+    Height="1200"
+    VerticalAlignment="Center"
+    Width="740"
+    MinWidth="740">
+    <Grid
+        VerticalAlignment="Stretch">
+        <Button
+            Grid.Column="0"
+            Grid.Row="0"
+            VerticalAlignment="Stretch"
+            Content="Open Image"
+            Height="24"
+            Width="100"
+            Margin="0,0,0,0"
+            HorizontalAlignment="Left"
+            x:Name="button1"
+            Click="button1_Click" />
+        <TextBox
+            Width="468"
+            x:Name="poleLoc"
+            Grid.Column="0"
+            Grid.Row="0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Stretch"
+            Margin="104,6,0,4"
+            IsEnabled="False" />
+        <Button
+            Grid.Column="0"
+            Grid.Row="0"
+            Content="Settings"
+            Height="24"
+            Width="70"
+            Margin="500,0,0,0"
+            x:Name="settings"
+            Click="settings_Click" />
+        <Button
+            Grid.Column="0"
+            Grid.Row="0"
+            Content="About"
+            Height="24"
+            Width="70"
+            Margin="650,0,0,0"
+            x:Name="about"
+            Click="about_Click" />
+        <Canvas
+            Grid.Column="0"
+            Grid.Row="1"
+            Grid.RowSpan="2"
+            VerticalAlignment="Top"
+            Margin="0,0,0,0"
+            HorizontalAlignment="Left"
+            Width="717"
+            Height="945">
+            <Image
+                Canvas.Top="0"
+                Canvas.Left="4"
+                Width="709"
+                Height="945"
+                x:Name="pole"
+                Source="" />
+            <Border
+                BorderBrush="Silver"
+                BorderThickness="2"
+                Width="500"
+                Height="700"
+                Canvas.Left="100"
+                Canvas.Top="50"
+                Name="bdrAbout"
+                Panel.ZIndex="1"
+                Visibility="Collapsed">
+                <StackPanel
+                    Orientation="Vertical"
+                    Background="AliceBlue">
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        FontSize="40"
+                        FontWeight="Bold"
+                        Margin="0,30,0,0">LithoGratos V0.7</TextBlock>
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        FontSize="21"
+                        TextWrapping="Wrap"
+                        MaxWidth="210"
+                        FontWeight="Bold">Copyright © 2019 Jacob Stoppel<LineBreak /><Hyperlink
+                            NavigateUri="https://github.com/MorphiOs">MorphiOs @ GitHub</Hyperlink></TextBlock>
+                    <TextBlock
+                        Margin="20"
+                        TextAlignment="Center"
+                        FontSize="16">Includes Magick.NET an Implementation of ImageMagick 7<LineBreak />© 1999-2019 ImageMagick Studio LLC</TextBlock>
+                    <TextBlock
+                        TextAlignment="Center"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        Foreground="Maroon">Licensed with GNU Affero General Public License v3.0</TextBlock>
+                </StackPanel>
+            </Border>
+        </Canvas>
+        <Grid
+            Grid.Row="2">
+            <Label
+                Content="First Line"
+                Grid.Column="0"
+                Grid.Row="0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="0,0,0,0" />
+            <TextBox
+                Grid.Column="1"
+                Grid.Row="0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="0,0,0,5"
+                x:Name="lineOne" />
+            <Label
+                Content="Second Line"
+                Grid.Column="0"
+                Grid.Row="1"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="0,0,0,0" />
+            <TextBox
+                x:Name="lineTwo"
+                Grid.Column="1"
+                Grid.Row="1"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="0,0,0,5"
+                Text="(Class X Length XX)" />
+            <Label
+                Content="Third Line"
+                Grid.Column="0"
+                Grid.Row="2"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="0,0,0,0" />
+            <TextBox
+                x:Name="lineThree"
+                Grid.Column="1"
+                Grid.Row="2"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="0,0,0,5" />
+            <Label
+                Content="Fourth Line"
+                Grid.Column="0"
+                Grid.Row="3"
+                VerticalAlignment="Stretch"
+                Width="70"
+                HorizontalAlignment="Left"
+                Margin="0,0,0,0" />
+            <TextBox
+                x:Name="lineFour"
+                Grid.Column="1"
+                Grid.Row="3"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="0,0,0,5"
+                Text="(Date)" />
+            <Button
+                x:Name="magic"
+                Click="magic_Click"
+                Content="Add text and Logo"
+                Grid.Row="4"
+                Width="110"
+                Grid.Column="1" />
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="30" />
+                <RowDefinition
+                    Height="30" />
+                <RowDefinition
+                    Height="30" />
+                <RowDefinition
+                    Height="30" />
+                <RowDefinition
+                    Height="30" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="90" />
+                <ColumnDefinition
+                    Width="200" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="30" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="175" />
+        </Grid.RowDefinitions>
+    </Grid>
+</Window>
